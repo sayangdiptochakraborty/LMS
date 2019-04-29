@@ -37,8 +37,15 @@ Sayangdipto Chakraborty
 ### Screenshots:
 
 - For Login Page
+
   ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture.PNG)
+  
+  
 - For display of table from MongoDB
+
   ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture2.PNG)
+  
+  
 - Searching and Displaying entries from the table
+
   ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture3.PNG)
