@@ -6,7 +6,7 @@ The Lead Management System gathers data of leads from **MongoDB** and displays t
 
 ## Tech Used :
 
-PHP, HTML, CSS and JS with basics of MongoDB (php-mongo)
+**PHP**, **HTML**, **CSS** and **JS** with **MongoDB** (*php-mongo*)
 
 ## Dummy Dataset:
 
