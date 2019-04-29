@@ -33,3 +33,9 @@ Will fix once I finish loading in DB.
 ## Created by:
 
 Sayangdipto Chakraborty
+
+### Screenshots:
+
+- ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture.PNG)
+- ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture2.PNG)
+- ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture3.PNG)
