@@ -93,16 +93,9 @@
   }
 </style>
 <?php
-function isNull($str)
-{
-  return (!isset($str) || trim($str) === '');
-}
-
-function updateDB($collection,$new_data,$id)
-{
-  $filter=array('_id' => $id,'phone' => $new_data['phone'] );
-  $collection->update($filter, array('$set' => $new_data),array('upsert' => true));
-}
+include 'utils.php';
+include 'db.php';
+include 'connections.php';
 ?>
 <body onload="zoom()">
 <div class="row">
@@ -125,26 +118,16 @@ function updateDB($collection,$new_data,$id)
       <th><input type="text" class="form-control" placeholder="URL" disabled></th>
       <th><input type="text" class="form-control" placeholder="Referrer" disabled></th>
       <th><input type="text" class="form-control" placeholder="Base URL" disabled></th>
-      <th><input type="text" class="form-control" placeholder="Lead Assigned To" disabled></th>
-      <th><input type="text" class="form-control" placeholder="Person Assigned To" disabled></th>
-      <th><input type="text" class="form-control" placeholder="Lead Status" disabled></th>
+      <th><input type="text" class="form-control" placeholder="Lead" disabled></th>
+      <th><input type="text" class="form-control" placeholder="Person" disabled></th>
+      <th><input type="text" class="form-control" placeholder="Status" disabled></th>
       <th>Update Details</th>
     </tr>
 </thead>
 <tbody>
 <?php
 $server='mongodb://127.0.0.1:27017'; //replace by server details e.g "mongodb://admu:new_pass@localhost:27017/university"
-try
-{
-    $m= new MongoClient($server);
-}
-catch (MongoConnectionException $connectionException)
-{
-    print $connectionException;
-    exit;
-}
-$db=$m->selectDB('fullstack');
-$collection = $db->clients;//replcae client by name of Your collection
+$collection=connectDB($server,'fullstack',1); //replace fullstack by db name
 $cursor = $collection->find();
 foreach($cursor as $document){
   if(!(isNull($document["group_size"]) || isNull($document["phone"])|| isNull($document["tour_date"]) || isNull($document["email"])))

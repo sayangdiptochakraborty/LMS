@@ -1,19 +1,27 @@
 <!DOCTYPE HTML>
 <?php
     session_start();
-    $username="admin"; //get this from the database
-    $password="password"; //get the password for the username from db
+
     if(isset($_SESSION['logged_in']) &&$_SESSION['logged_in']==true)
     {
         header("Location: index.php");
     }
 
+    include 'connections.php'; //for connnecting to DB
+    $server='mongodb://127.0.0.1:27017'; //replace by server details e.g "mongodb://admu:new_pass@localhost:27017/university"
+    $collection=connectDB($server,'fullstack',0); //replace fullstack by db name
+
     if(isset($_POST['username']) && isset($_POST['password']))
-    {
-        if($_POST["username"]==$username && $_POST["password"]==$password)
+    {   $username = $_POST['username'];
+        $password = $_POST['password'];
+        $cursor = $collection->find(array('username' => $username));
+        foreach($cursor as $document)
         {
+          if($document['password']==$password)
+          {
             $_SESSION['logged_in']=true;
             header("Location: index.php");
+          }
         }
     }
 ?>
@@ -232,7 +240,7 @@
             <h2 style="padding-top:20px;padding-bottom:20px;">TrippyIgloo LMS</h2>
             <form method="post" action="login.php">
             Username:<br/>
-            <input type="text" id="login" class="fadeIn second" name="username" placeholder="adam">
+            <input type="text" id="login" class="fadeIn second" name="username" placeholder="admin">
             <br/><br/>
             Password:<br/>
             <input type="text" id="password" class="fadeIn third" name="password" placeholder="********">
