@@ -14,10 +14,15 @@ The Lead Management System gathers data of leads from **MongoDB** and displays t
 
 {"group_size" : "4", "form" : "tour_request_quote_form", "phone" : "9099090999", "url" : "https://trippyigloo.com/lead/", "referrer" : "https://trippyigloo.com/tour/kabini-wildlife-safari-bangalore-weekend-getaway-nagarhole-tiger-reserve-nilgiri-bioreserve-kabini-jungle-tour/", "base_url" : "https://trippyigloo.com/lead/", "headers" : { "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36" }, "tour_date" : "05-26-2019", "email" : "ab@gmail.com", "company_list" : [ "LetsHimalaya", "Sattvanic", "Robo" ], "person_list" : [ "A", "B", "C" ], "lead_status" : [ "Follow Up", "New Lead", "Booked" ], "lead_assigned" :"NIL", "person_assigned": "NIL", "status":"New Lead"}
 
+## Utility of Files:
+
+- login.php : loads the login page for user login
+- index.php : loads the table from MongoDB in HTML that can be updated 
+- connections.php : connects to MongoDB 
+- db.php : used to update details in MongoDB. Later may be used to insert/delete entries as needed.
+- utils.php : any other validation functions if used are kept here.
 
 ## Work Left:
-
-The Login page needs to be integrated with MongoDB as well.
 
 UI improvements of the index page. Table Load.
 
@@ -29,7 +34,7 @@ Will fix once I finish loading in DB.
 
 ## Version:
 
-1.5.0
+2.0.0
 
 ## Created by:
 
