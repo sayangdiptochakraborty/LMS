@@ -1,7 +1,7 @@
 # Lead Management System for TrippyIgloo.
 I made this for my current company [TrippyIgloo](https://www.trippyigloo.com/) to efficiently manage their leads.
 
-The first page loaded is the Login Page. Currently only "admin" as username and "password" as password are the login details.
+The first page loaded is the Login Page.
 The Lead Management System gathers data of leads from **MongoDB** and displays them in a table. The table can be searched, and the entries/leads can be updated.
 
 ## Tech Used :
