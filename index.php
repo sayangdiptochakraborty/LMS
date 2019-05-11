@@ -96,6 +96,7 @@
 include 'utils.php';
 include 'db.php';
 include 'connections.php';
+require 'vendor/autoload.php';
 ?>
 <body onload="zoom()">
 <div class="row">
@@ -127,7 +128,7 @@ include 'connections.php';
 <tbody>
 <?php
 $server='mongodb://127.0.0.1:27017'; //replace by server details e.g "mongodb://admu:new_pass@localhost:27017/university"
-$collection=connectDB($server,'fullstack',1); //replace fullstack by db name
+$collection=connectDB($server,'phototrip',1); //replace fullstack by db name
 $cursor = $collection->find();
 foreach($cursor as $document){
   if(!(isNull($document["group_size"]) || isNull($document["phone"])|| isNull($document["tour_date"]) || isNull($document["email"])))
@@ -148,23 +149,24 @@ foreach($cursor as $document){
     <form action="" method="POST">
       <h4>Lead Assignment</h4>
       <select class="lead" name="lead">
-        <?php foreach($document["company_list"] as $val) {
+        <?php
+          $company_list=connectDB($server,'phototrip',2)->find();
+          foreach($company_list as $val) {
           ?>
-          <option value='<?php echo $val;?>'><?php echo $val; ?></option>
+          <option value='<?php echo $val['title'];?>'><?php echo $val['title']; ?></option>
         <?php } ?>
       </select><br><h4>Person Assignment</h4>
       <select class="person" name="person">
-        <?php foreach($document["person_list"] as $val) {
-          ?>
-          <option value='<?php echo $val;?>'><?php echo $val; ?></option>
-        <?php } ?>
+        <option value='Ananth'>Ananth</option>
+        <option value='Nikhil'>Nikhil</option>
+        <option value='Rajiv'>Rajiv</option>
+        <option value='Abhiram'>Abhiram</option>
       </select><br>
       <h4>Lead Status</h4>
       <select class="status" name="status">
-        <?php foreach($document["lead_status"] as $val) {
-          ?>
-          <option value='<?php echo $val;?>'><?php echo $val; ?></option>
-        <?php } ?>
+        <option value='New Lead'>New Lead</option>
+        <option value='Follow Up'>Follow Up</option>
+        <option value='Booked'>Booked</option>
       </select><br><br>
       <input type="submit" name="<?php echo $document['phone']; ?>" value="Update Details">
     </form>

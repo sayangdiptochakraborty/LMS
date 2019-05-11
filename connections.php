@@ -1,23 +1,22 @@
 <?php
+require 'vendor/autoload.php';
 function connectDB($server,$dbName,$var) //$var =0 login.php calling, $var =1 index.php calling
 {
-  try
-  {
-      $m= new MongoClient($server);
-  }
-  catch (MongoConnectionException $connectionException)
-  {
-      print $connectionException;
-      exit;
-  }
-  $db=$m->selectDB($dbName);
+  $m= new MongoDB\Client($server);
+  $db=$m->selectDatabase($dbName);
   if($var==0) //login php
   {
-    $collection = $db->userdb;//replcae clients by name of Your collection*/
+    $collection = $db->lmslogin;//replcae lmslogin by name of Your collection*/
+   }
+  elseif($var==1)//index.php
+  {
+    $collection = $db->leads;//replcae leads by name of Your collection*/
   }
-  else {
-    $collection = $db->clients;
+  else //comapny list
+  {
+    $collection=$db->companies; //replcae companies by name of Your collection*/
   }
+  //$collection=$collection->find()->toArray();
   return $collection;
 }
 

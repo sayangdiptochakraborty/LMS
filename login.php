@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <?php
     session_start();
-
-    if(isset($_SESSION['logged_in']) &&$_SESSION['logged_in']==true)
+    require 'vendor/autoload.php';
+    if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']==true)
     {
         header("Location: index.php");
     }
 
     include 'connections.php'; //for connnecting to DB
     $server='mongodb://127.0.0.1:27017'; //replace by server details e.g "mongodb://admu:new_pass@localhost:27017/university"
-    $collection=connectDB($server,'fullstack',0); //replace fullstack by db name
+    $collection=connectDB($server,'phototrip',0); //replace fullstack by db name
 
     if(isset($_POST['username']) && isset($_POST['password']))
     {   $username = $_POST['username'];
         $password = $_POST['password'];
-        $cursor = $collection->find(array('username' => $username));
+        $cursor = $collection->find(['username' => $username]);
         foreach($cursor as $document)
         {
           if($document['password']==$password)
