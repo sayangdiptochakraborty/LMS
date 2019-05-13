@@ -1,8 +1,12 @@
+<?php
+if(isset($_SERVER['HTTP_REFERER']))
+{
+?>
 <html>
-<head>      
+<head>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <script src="js/index.js"></script>
   <!-- MDBootstrap Datatables  -->
@@ -102,3 +106,17 @@ require 'vendor/autoload.php';
 </div>
 </body>
 </html>
+<?php
+}
+else {
+  // code...
+?>
+<html>
+  <body style="text-align: center;">
+    <h1>ACCESS DENIED!</h1>
+    <h2>Please <a href="http://leads.trippyigloo.com:8085/lead-management-system/login.php">Login</a>.</h2>
+  </body>
+</html>
+<?php
+}
+?>
