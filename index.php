@@ -13,6 +13,7 @@ if(isset($_SERVER['HTTP_REFERER']))
   <link href="css/addons/datatables.min.css" rel="stylesheet">
   <!-- MDBootstrap Datatables  -->
   <script type="text/javascript" src="js/addons/datatables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
 </head>
 <?php
 include 'utils.php';
@@ -21,8 +22,10 @@ include 'connections.php';
 require 'vendor/autoload.php';
 ?>
 <body>
+  <?php include 'navbar.php';
+        navBar();
+  ?>
 <div class="row">
-  <h1 class="text-info">TrippyIgloo Lead Management System</h1>
     <div class="container">
       <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
         <thead>

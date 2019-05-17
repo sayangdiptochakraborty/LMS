@@ -1,12 +1,11 @@
 # Lead Management System for TrippyIgloo.
-I made this for my current company [TrippyIgloo](https://www.trippyigloo.com/) to efficiently manage their leads.
 
 The first page loaded is the Login Page.
 The Lead Management System gathers data of leads from **MongoDB** and displays them in a table. The table can be searched, and the entries/leads can be updated.
 
 ## Tech Used :
 
-**PHP**, **HTML**, **CSS** and **JS** with **MongoDB** (*php-mongo*)
+**PHP**, **HTML**, **CSS** and **JS** with basics of **MongoDB** (*php-mongo*)
 
 ## Dummy Dataset:
 
@@ -39,19 +38,3 @@ Will fix once I finish loading in DB.
 ## Created by:
 
 Sayangdipto Chakraborty
-
-## Screenshots:
-
-- For Login Page
-
-  ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture.PNG)
-  
-  
-- For display of table from MongoDB
-
-  ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture2.PNG)
-  
-  
-- Searching and Displaying entries from the table
-
-  ![](https://github.com/sayangdiptochakraborty/LMS/blob/master/img/Capture3.PNG)

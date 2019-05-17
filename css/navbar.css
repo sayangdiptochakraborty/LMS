@@ -1,0 +1,29 @@
+        .btn
+        {
+            background-color: #56BAED;
+            color: white;
+            font-size: 18px;
+            transition: all .4s ease;
+            -webkit-transition: all .4s ease;
+        }
+        .btn:hover
+        {
+            background-color: #000080;
+            color: white;
+        }
+        .btnactive
+        {
+            background-color: #56BAED;
+            color: white;
+        }
+        @media(max-width:720px)
+        {
+            .btn
+            {
+                font-size: 10px;
+            }
+        }
+        .btn-group
+        {
+          margin-bottom: 10px;
+        }
