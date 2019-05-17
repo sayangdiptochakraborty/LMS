@@ -9,9 +9,9 @@ The Lead Management System gathers data of leads from **MongoDB** and displays t
 
 ## Dummy Dataset:
 
-{"group_size" : "3", "form" : "tour_request_quote_form", "phone" : "9999999999", "url" : "https://trippyigloo.com/lead/", "referrer" : "https://trippyigloo.com/tour/kabini-wildlife-safari-bangalore-weekend-getaway-nagarhole-tiger-reserve-nilgiri-bioreserve-kabini-jungle-tour/", "base_url" : "https://trippyigloo.com/lead/", "headers" : { "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36" }, "tour_date" : "04-24-2019", "email" : "a@gmail.com", "company_list" : [ "LetsHimalaya", "Sattvanic", "Robo" ], "person_list" : [ "A", "B", "C" ], "lead_status" : [ "Follow Up", "New Lead", "Booked" ], "lead_assigned" :"NIL", "person_assigned": "NIL", "status":"New Lead"}
+{"group_size" : "3", "form" : "tour_request_quote_form", "phone" : "9999999999", "url" : "#", "referrer" : "#", "base_url" : "#", "headers" : { "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36" }, "tour_date" : "04-24-2019", "email" : "a@gmail.com"}
 
-{"group_size" : "4", "form" : "tour_request_quote_form", "phone" : "9099090999", "url" : "https://trippyigloo.com/lead/", "referrer" : "https://trippyigloo.com/tour/kabini-wildlife-safari-bangalore-weekend-getaway-nagarhole-tiger-reserve-nilgiri-bioreserve-kabini-jungle-tour/", "base_url" : "https://trippyigloo.com/lead/", "headers" : { "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36" }, "tour_date" : "05-26-2019", "email" : "ab@gmail.com", "company_list" : [ "LetsHimalaya", "Sattvanic", "Robo" ], "person_list" : [ "A", "B", "C" ], "lead_status" : [ "Follow Up", "New Lead", "Booked" ], "lead_assigned" :"NIL", "person_assigned": "NIL", "status":"New Lead"}
+{"group_size" : "4", "form" : "tour_request_quote_form", "phone" : "9099090999", "url" : "#", "referrer" : "#", "base_url" : "#", "headers" : { "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36" }, "tour_date" : "05-26-2019", "email" : "ab@gmail.com"}
 
 ## Utility of Files:
 
@@ -23,7 +23,7 @@ The Lead Management System gathers data of leads from **MongoDB** and displays t
 
 ## Work Left:
 
-UI improvements of the index page. Table Load.
+Logout Button, work on upload and insert data.
 
 
 ## Issues: 
@@ -33,7 +33,7 @@ Will fix once I finish loading in DB.
 
 ## Version:
 
-2.0.0
+2.5.0
 
 ## Created by:
 
